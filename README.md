@@ -1,204 +1,85 @@
-
 # PayLabel AI
 
-**Payments data annotation platform for fraud, disputes, compliance, and AI training.**
-
-PayLabel AI is a fintech-focused data annotation tool designed to help risk, compliance, operations, and AI teams label synthetic payment events, fraud signals, chargebacks, failed payments, KYC/AML issues, and customer support conversations.
-
-This project demonstrates how human-in-the-loop annotation workflows can support AI model training, fraud detection, payment operations, and fintech compliance review.
-
----
+PayLabel AI is the standalone fintech portfolio project in `paylabel-ai/`. It
+reframes a data annotation tool into a payments-focused review platform for
+fraud, disputes, compliance, and AI training workflows.
 
 ## Project Overview
 
-Payment companies deal with large volumes of transaction data, failed payments, disputes, refunds, fraud alerts, and customer support cases. Before AI models can help automate these workflows, the data needs to be reviewed, labelled, and structured by humans.
-
-PayLabel AI simulates that workflow using synthetic payment data.
-
-The platform allows annotators to review mock transactions, apply labels, add notes, assign confidence levels, escalate risky cases, and export labelled datasets for AI training or model evaluation.
-
----
+The app simulates how payment teams label synthetic transaction data, review
+chargebacks, inspect risky merchant activity, and classify customer support
+conversations. It is designed as a clean, portfolio-ready demo that mirrors the
+workflows used by fintech risk, fraud, compliance, and machine learning teams.
 
 ## Problem It Solves
 
-Fintech and payment companies need high-quality labelled data to train and evaluate AI systems for:
+Payment businesses need fast ways to review noisy operational data and turn it
+into structured training labels. Analysts often need to:
 
-- Fraud detection
-- Chargeback classification
-- Failed payment analysis
-- Refund and dispute handling
-- KYC and AML review
-- Customer support automation
-- Compliance escalation workflows
+- identify suspicious transactions,
+- separate fraud from false positives,
+- triage disputes and chargebacks,
+- flag compliance and KYC/AML issues,
+- and label support conversations for model training and evaluation.
 
-Poorly labelled data can lead to inaccurate models, missed fraud, bad customer experiences, and compliance risks.
+PayLabel AI demonstrates that workflow in a synthetic, local-only Next.js app.
 
-PayLabel AI shows how structured human review can improve the quality of datasets used in AI systems.
+## Fintech / Payment Use Case
 
----
+This project is tailored to payment operations and risk teams that work with
+transaction monitoring, dispute handling, and customer support review. It can
+serve as a portfolio example for:
 
-## Key Features
+- fraud operations tooling,
+- compliance review tooling,
+- chargeback analysis,
+- payment support classification,
+- and AI dataset labeling for payment risk models.
 
-### Payment Annotation Dashboard
+## Features
 
-The dashboard gives an overview of payment review activity, including:
-
-- Total transactions reviewed
-- Pending annotations
-- Fraud flagged
-- Chargebacks labelled
-- Failed payments
-- High-risk merchants
-- Recent annotation activity
-- Label breakdown by category
-
----
-
-### Transaction Annotation Queue
-
-Annotators can review a queue of synthetic payment events with details such as:
-
-- Transaction ID
-- Customer ID
-- Merchant name
-- Amount
-- Currency
-- Payment method
-- Payment status
-- Risk score
-- Country
-- Timestamp
-- Annotation status
-
-Each transaction can be opened for deeper review and labelling.
-
----
-
-### Transaction Detail & Labelling
-
-Each transaction can be labelled with one or more payment-specific categories, including:
-
-- Fraud
-- Not fraud
-- Suspicious
-- Chargeback
-- Failed payment
-- Refund request
-- KYC issue
-- AML review
-- Compliance escalation
-- Customer support issue
-
-Annotators can also:
-
-- Add review notes
-- Select confidence level
-- Mark the transaction as reviewed
-- Escalate high-risk cases to compliance
-- Save annotations
-
----
-
-### Support Conversation Labelling
-
-PayLabel AI also includes mock customer support conversations that can be labelled for AI training.
-
-Example support labels include:
-
-- Payment failed
-- Refund request
-- Chargeback threat
-- Account verification issue
-- Suspected fraud
-- Customer confusion
-- Merchant complaint
-
-This helps simulate how AI teams might prepare support data for chatbot training or customer-service automation.
-
----
-
-### Human Review Queue
-
-High-risk or low-confidence annotations can be sent to a review queue.
-
-The review queue includes:
-
-- Transaction details
-- Selected label
-- Confidence level
-- Assigned reviewer
-- Review status
-- Reviewer notes
-
-This demonstrates a human-in-the-loop quality control process for AI training data.
-
----
-
-### Dataset Export
-
-Reviewed annotations can be exported as structured data for downstream AI workflows.
-
-Exported data includes:
-
-- Transaction ID
-- Original payment fields
-- Selected labels
-- Annotator notes
-- Confidence level
-- Review status
-- Created date
-
-This simulates how labelled data could be passed into model training, model evaluation, or analytics pipelines.
-
----
+- Dashboard with summary cards, an activity feed, and label breakdown charts.
+- Transaction annotation queue with 20+ synthetic payment events.
+- Transaction detail pages for labeling, notes, confidence, review, and
+  compliance escalation.
+- Support conversation labelling with 10 synthetic conversations.
+- Human review queue for high-risk and low-confidence annotations.
+- JSON and CSV export for labelled data.
+- Fintech-style navigation and product copy throughout the UI.
 
 ## Tech Stack
 
-- Frontend: React / Next.js
-- Styling: Tailwind CSS
-- Data: Synthetic mock payment data
-- Export: JSON / CSV
-- Deployment: Vercel-ready
-
----
-
-## Fintech & AI Use Case
-
-PayLabel AI is built around a realistic fintech workflow where human reviewers prepare structured datasets for AI systems.
-
-Potential use cases include:
-
-- Training fraud detection models
-- Evaluating AI-generated risk decisions
-- Preparing labelled payment dispute datasets
-- Reviewing chargeback patterns
-- Creating customer support training data
-- Supporting compliance review workflows
-
-This project is especially relevant to roles in:
-
-- AI training
-- Data annotation
-- Fintech operations
-- Payment operations
-- Fraud and risk analysis
-- AI product operations
-- LLM evaluation
-- Human-in-the-loop AI workflows
-
----
-
-## Security & Compliance Note
-
-PayLabel AI uses synthetic mock data only.
-
-No real cardholder data, real customer data, or sensitive payment information is stored or processed in this project.
-
-Any realistic payment values are for demonstration purposes only. Card details should always be masked, and real payment systems should follow appropriate security and compliance standards such as PCI DSS principles when handling cardholder data.
-
----
+- Next.js 16 App Router
+- React 19
+- TypeScript
+- Tailwind CSS 4
 
 ## Screenshots
 
-(tbc)
+Add screenshots of the dashboard, transaction detail page, support labelling
+view, review queue, and export screen here.
 
+## Security / Compliance Note
+
+This project uses synthetic mock data only. No real cardholder data, PAN, CVV,
+or authentication data is stored or displayed. The UI is intentionally shaped
+to reflect PCI-aware workflows while following the principle that real payment
+data should be protected under PCI DSS and broader security controls.
+
+## Future Improvements
+
+- Role-based access
+- Audit logs
+- Integration with payment processors
+- Model feedback loop
+- Active learning for annotation prioritisation
+- Compliance reporting dashboard
+
+## Local Development
+
+```bash
+npm install
+npm run dev
+```
+
+Open `http://localhost:3000` to view the app.
