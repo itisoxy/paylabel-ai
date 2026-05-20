@@ -4,6 +4,12 @@ PayLabel AI is the standalone fintech portfolio project in `paylabel-ai/`. It
 reframes a data annotation tool into a payments-focused review platform for
 fraud, disputes, compliance, and AI training workflows.
 
+## PayLabel AI App Screenshots
+
+| Dashboard | Transaction queue | Support labelling |
+| --- | --- | --- |
+| <img src="public/screenshots/dashboard.png" alt="PayLabel AI dashboard" width="420"> | <img src="public/screenshots/transactions.png" alt="PayLabel AI transaction queue" width="420"> | <img src="public/screenshots/support-labelling.png" alt="PayLabel AI support labelling view" width="420"> |
+
 ## Project Overview
 
 The app simulates how payment teams label synthetic transaction data, review
@@ -53,11 +59,6 @@ serve as a portfolio example for:
 - React 19
 - TypeScript
 - Tailwind CSS 4
-
-## Screenshots
-
-Add screenshots of the dashboard, transaction detail page, support labelling
-view, review queue, and export screen here.
 
 ## Security / Compliance Note
 
